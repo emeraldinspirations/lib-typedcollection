@@ -1,0 +1,21 @@
+{
+    "name": "emeraldinspirations/lib-typedcollection",
+    "description": "",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Matthew \"Juniper\" Barlett",
+            "email": "emeraldinspirations@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "repositories" : [
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "emeraldinspirations\\library\\typedCollection\\": "src/"
+        }
+    }
+}
