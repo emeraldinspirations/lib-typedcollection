@@ -18,54 +18,75 @@ the validation of the data consistently at the creation of the object.
 
 This project has no dependencies, so can be cloned directly from the git repo
 
-### Clone with HTTPS
+### Option 1 - Clone with HTTPS
 
 ```shell
 git clone https://github.com/emeraldinspirations/lib-typedcollection.git
 ```
 
-### Clone with SSH
+### Option 2 - Clone with SSH
 
 ```shell
 git clone git@github.com:emeraldinspirations/lib-typedcollection.git
 ```
 
-### Require with Composer
+### Option 3 - Require with Composer
 
 Add the following lines to your `composer.json` file
 
 ```json
+    ...
     "repositories" : [
+        ...
         {
             "type" : "vcs",
             "url" : "https://github.com/emeraldinspirations/lib-typedcollection.git"
         },
+        ...
     ],
     "require": {
-        "emeraldinspirations/lib-typedcollection":"*"
-    },    
+        ...
+        "emeraldinspirations/lib-typedcollection":"*",
+        ...
+    },
+    ...
 ```
 
 ## Features
 
 - Validate the array passed has elements containing only one type
-- Returns a copy of the array when requested
+- Return a copy of the array when requested
 
 ## Example
 
-*(Section not completed)*
+```php
+<?php // {projectPath}/Controller/DemoCollection.php
+
+namespace {vendor}\{product}\Controller;
+
+use emeraldinspirations\library\typedCollection\TypedCollection;
+
+class DemoCollection extends TypedCollection
+{
+
+    public function __construct(array $Array) {
+       parent::__construct(MockInterface::class, $Array);
+    }
+
+}
+```
 
 ## Documentation
 Further documentation is available thanks to [phpDocumentor2](https://www.phpdoc.org/) and [PHPDocumentor Markdown generator](https://github.com/evert/phpdoc-md):
 
-*(Section not completed)*
+- [Documentation](phpdoc/md/ApiIndex.md)
 
 ## Contributing
 
 One of the goals of this project is simplicity.  This is a "bandaid" until PHP
-implements a typed array.  Therefore I am not looking for additional features.
-If you'd like to contribute, please fork the repository and use a feature
-branch.
+implements a typed array.  Therefore I am not looking for additional features.  
+However, optimization is always a plus.  If you'd like to contribute, please
+fork the repository and use a feature branch.
 
 I am also open to feedback about how well I am being compliant with standards
 and "best practices."  I have written software solo for years, and am trying to

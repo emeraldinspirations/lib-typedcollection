@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="API Documentation" version="2.8.5">
+  <partials/>
+  <file path="TypedCollection.php" generated-path="TypedCollection.html" hash="da8a5ae7f40b4a9a326e626ce42f042e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="emeraldinspirations\library\typedCollection" line="15" package="Default">
+      <extends/>
+      <implements>\emeraldinspirations\library\typedCollection\CollectionInterface</implements>
+      <name>TypedCollection</name>
+      <full_name>\emeraldinspirations\library\typedCollection\TypedCollection</full_name>
+      <docblock line="15">
+        <description>A verified collection of a specific type</description>
+        <long-description>An extended class can be used as a parameter, ensuring that the array passed
+contains only the requested type.</long-description>
+        <tag name="author" line="15" description="Matthew &quot;Juniper&quot; Barlett" link="mailto:emeraldinspirations@gmail.com"/>
+        <tag name="see" line="15" description="What this class implements" link="\IteratorAggregate"/>
+        <tag name="see" line="15" description="What this class implements" link="\Countable"/>
+        <tag name="package" line="15" description="Default"/>
+      </docblock>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="emeraldinspirations\library\typedCollection" line="41" package="Default">
+        <name>verifyArray</name>
+        <full_name>\emeraldinspirations\library\typedCollection\TypedCollection::verifyArray()</full_name>
+        <docblock line="41">
+          <description>Iterate array, throw exception if any element is not of supplied type</description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\emeraldinspirations\library\typedCollection\CollectionInterface::verifyArray()" refers="\emeraldinspirations\library\typedCollection\CollectionInterface::verifyArray()" link="/classes/emeraldinspirations.library.typedCollection.CollectionInterface.html#method_verifyArray"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$DataType</name>
+          <default></default>
+          <type>\emeraldinspirations\library\typedCollection\string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$Array</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="emeraldinspirations\library\typedCollection" line="73" package="Default">
+        <name>__construct</name>
+        <full_name>\emeraldinspirations\library\typedCollection\TypedCollection::__construct()</full_name>
+        <docblock line="73">
+          <description>Construct object or throw exception if element is not of supplied type</description>
+          <long-description></long-description>
+          <tag name="param" line="73" description="&lt;p&gt;CollectionType  The type each element must be&lt;/p&gt;" type="string" variable="$CollectionType">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="73" description="&lt;p&gt;Array           The array to verify&lt;/p&gt;" type="array" variable="$Array">
+            <type>array</type>
+          </tag>
+          <tag name="throws" line="73" description="Thrown when an element is found that is&#10;                                 not of the specified data type" type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+          <tag name="see" line="73" description="Exception code thrown" link="self::ERROR_UNEXPECTEDTYPE"/>
+          <tag name="see" line="73" description="Storage for datatype of elements in&#10;                                 array" link="self::CollectionType"/>
+          <tag name="see" line="73" description="Storage for the verified array" link="self::Array"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$CollectionType</name>
+          <default></default>
+          <type>\emeraldinspirations\library\typedCollection\string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$Array</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="true" abstract="false" static="false" visibility="public" namespace="emeraldinspirations\library\typedCollection" line="82" package="Default">
+        <name>toArray</name>
+        <full_name>\emeraldinspirations\library\typedCollection\TypedCollection::toArray()</full_name>
+        <docblock line="82">
+          <description>Return the verified array</description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\emeraldinspirations\library\typedCollection\CollectionInterface::toArray()" refers="\emeraldinspirations\library\typedCollection\CollectionInterface::toArray()" link="/classes/emeraldinspirations.library.typedCollection.CollectionInterface.html#method_toArray"/>
+        </docblock>
+      </method>
+      <method final="true" abstract="false" static="false" visibility="public" namespace="emeraldinspirations\library\typedCollection" line="90" package="Default">
+        <name>getCollectionType</name>
+        <full_name>\emeraldinspirations\library\typedCollection\TypedCollection::getCollectionType()</full_name>
+        <docblock line="90">
+          <description>Return the datatype of all the elements in the contained array</description>
+          <long-description></long-description>
+          <tag name="inherited_from" description="\emeraldinspirations\library\typedCollection\CollectionInterface::getCollectionType()" refers="\emeraldinspirations\library\typedCollection\CollectionInterface::getCollectionType()" link="/classes/emeraldinspirations.library.typedCollection.CollectionInterface.html#method_getCollectionType"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="emeraldinspirations\library\typedCollection" line="98" package="Default">
+        <name>getIterator</name>
+        <full_name>\emeraldinspirations\library\typedCollection\TypedCollection::getIterator()</full_name>
+        <docblock line="98">
+          <description>Return an \ArrayIterator for the contents of this collection object</description>
+          <long-description>Requried for For...Each to work</long-description>
+          <tag name="inherited_from" description="\emeraldinspirations\library\typedCollection\CollectionInterface::getIterator()" refers="\emeraldinspirations\library\typedCollection\CollectionInterface::getIterator()" link="/classes/emeraldinspirations.library.typedCollection.CollectionInterface.html#method_getIterator"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="emeraldinspirations\library\typedCollection" line="105" package="Default">
+        <name>count</name>
+        <full_name>\emeraldinspirations\library\typedCollection\TypedCollection::count()</full_name>
+        <docblock line="105">
+          <description>Return number of ControllerInterface objects in collection</description>
+          <long-description>Required for \count() to work</long-description>
+          <tag name="inherited_from" description="\emeraldinspirations\library\typedCollection\CollectionInterface::count()" refers="\emeraldinspirations\library\typedCollection\CollectionInterface::count()" link="/classes/emeraldinspirations.library.typedCollection.CollectionInterface.html#method_count"/>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="41" code="PPC:ERR-50015">Argument $DataType is missing from the Docblock of verifyArray</error>
+      <error line="41" code="PPC:ERR-50015">Argument $Array is missing from the Docblock of verifyArray</error>
+      <error line="73" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $CollectionType in __construct()</error>
+    </parse_markers>
+    <source>eJytVltv00oQfvevmIMqNalK+55SaCgW9OgcqNogQIoUbexJsshZm91126jqf2dmfVvHTomAfehldy7ffHPzqzfZKgsCJdZoMhEh4Bq1SGKpTCa1sDJVZprIuRZ6M7WbDOPLNEkw4oezIDg9OgrgCMZwh1ouJMYQ1c+QLkCAyTCilwhYmWSduAJ8sKhilk+EMRAJBXOE3NCNMKSWCU2QLOpjQGVyLdUS7EpY+oEgtBYbEjEkzvaiVFlBiCFVycZJaPyRo7Fkjd2elH4vRG5XqYb/hSWhe3jxb65khvoFvBU6QWvhVU/4F8u1kMlJlK5fOyMGEfwzvSKYwqZ6vFxqXApLz18KqNKU8cl1lpBpZU2/ics0pxDmiXf9rInToLictDPiCUFze6UI4IKSGzwGAZt2WeNzBLeEWywRFkQLE1fn0XFcSlXCF5ItKZHUF3dC14B9jXaIBpPFaDSbUZ6M1Xlk6e6W6Eb9jLhNxy7NxXnvi5+635mWd0z2gZM764Q2oXBiYQVXANciimgFWNDD/9eVtHeUBJ7qsIO5LzzYHWIhvkTbZIjT+GyIbdFurI8EekWps3EaPbVMGCKAum+Rq6JCXII3jrJBEQ8cvCOW2O5x2VkFo0On/xhUaaEScRQOimfu04OwoHPoifGRi8E/1RtQL1mhIiTKa0/bCnzsSqf3oKgvp1fqTiQyHutlzibChwgzRj/oKPE5vM2zLKmLthkH0uKaM32vUx4f5PcQTuD6w/Us/PQfnPQbCx9oYvHkYJwjYI0a9q+1x5HNReLp9kPmQxXAkAYNiefncJjOv5P7w51ab1hv5rq/0dwpPep66ZUdHvde98yQ0Si8ufl0M/v8Mfx6HV5OwneTb9dhR3t41rp6Ctp/PXUq+LJunoIBcAOJKwKr7FNZ1f1LY1Glro1NlfxiwThrdc+5NQJV5/oBuXS6GeHmQ2s4rHNjaR11rIhyIPmDic+k3kk2LRus1nUxGNhd05XkL8+ELSm4X6ECWpceEwvaHnGxHqXZ217JH4/BckkTiTwwfSa3x9bu5O/hsY6ZWjTGIr1qh6PtTEFrVbXmerXx5P5c9u+qwvN2dmG/JVlO7Hye+OPW2wr1uG2HtjV0vcFYwPEHdke1VGqa7YC/GF6+3mLvvLtBthS2gj6vtyr/1+3W3fumIkDSAm1oKJf5YEgTqSGtCVWjzbVqgflbrjuL1oHwVvkuFH2M/Q4cD0j1peggTF2Y1VUXhtuELZmBz8/wzxFF/NXpsNAnTxdA8dzv8yn4CfMncXg=</source>
+  </file>
+  <file path="CollectionInterface.php" generated-path="CollectionInterface.html" hash="b001981848bbcecf88c4da68036ac3b3" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <interface namespace="emeraldinspirations\library\typedCollection" line="15" package="Default">
+      <extends>\IteratorAggregate</extends>
+      <extends>\Countable</extends>
+      <name>CollectionInterface</name>
+      <full_name>\emeraldinspirations\library\typedCollection\CollectionInterface</full_name>
+      <docblock line="15">
+        <description>A verified collection of a specific type</description>
+        <long-description>An extended class can be used as a parameter, ensuring that the array passed
+contains only the requested type.</long-description>
+        <tag name="author" line="15" description="Matthew &quot;Juniper&quot; Barlett" link="mailto:emeraldinspirations@gmail.com"/>
+        <tag name="see" line="15" description="What this class implements" link="\IteratorAggregate"/>
+        <tag name="see" line="15" description="What this class implements" link="\Countable"/>
+        <tag name="package" line="15" description="Default"/>
+      </docblock>
+      <constant namespace="emeraldinspirations\library\typedCollection" line="24" package="Default">
+        <name>ERROR_UNEXPECTEDTYPE</name>
+        <full_name>\emeraldinspirations\library\typedCollection\CollectionInterface::ERROR_UNEXPECTEDTYPE</full_name>
+        <value>1485484450</value>
+        <docblock line="24">
+          <description>The error number thrown when an element is of the wrong type</description>
+          <long-description></long-description>
+          <tag name="var" line="24" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+          <tag name="see" line="24" description="Throwing function" link="self::verifyArray"/>
+        </docblock>
+      </constant>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="emeraldinspirations\library\typedCollection" line="38" package="Default">
+        <name>verifyArray</name>
+        <full_name>\emeraldinspirations\library\typedCollection\CollectionInterface::verifyArray()</full_name>
+        <docblock line="38">
+          <description>Iterate array, throw exception if any element is not of supplied type</description>
+          <long-description></long-description>
+          <tag name="param" line="38" description="&lt;p&gt;DataType        The type each element must be&lt;/p&gt;" type="string" variable="$DataType">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="38" description="&lt;p&gt;Array           The array to iterate&lt;/p&gt;" type="array" variable="$Array">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="38" description="" type="void">
+            <type>void</type>
+          </tag>
+          <tag name="throws" line="38" description="Thrown when an element is found that is&#10;                                 not of the specified data type" type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+          <tag name="see" line="38" description="Exception code thrown" link="\emeraldinspirations\library\typedCollection\CollectionInterface::ERROR_UNEXPECTEDTYPE"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$DataType</name>
+          <default></default>
+          <type>\emeraldinspirations\library\typedCollection\string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$Array</name>
+          <default></default>
+          <type>array</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="emeraldinspirations\library\typedCollection" line="46" package="Default">
+        <name>toArray</name>
+        <full_name>\emeraldinspirations\library\typedCollection\CollectionInterface::toArray()</full_name>
+        <docblock line="46">
+          <description>Return the verified array</description>
+          <long-description></long-description>
+          <tag name="return" line="46" description="The verified array" type="array">
+            <type>array</type>
+          </tag>
+          <tag name="see" line="46" description="Storage for the verified array" link="self::Array"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="emeraldinspirations\library\typedCollection" line="55" package="Default">
+        <name>getCollectionType</name>
+        <full_name>\emeraldinspirations\library\typedCollection\CollectionInterface::getCollectionType()</full_name>
+        <docblock line="55">
+          <description>Return the datatype of all the elements in the contained array</description>
+          <long-description></long-description>
+          <tag name="return" line="55" description="The datatype of all elements in&#10;                                 contained array" type="string">
+            <type>string</type>
+          </tag>
+          <tag name="see" line="55" description="Storage for datatype" link="self::CollectionType"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="emeraldinspirations\library\typedCollection" line="68" package="Default">
+        <name>getIterator</name>
+        <full_name>\emeraldinspirations\library\typedCollection\CollectionInterface::getIterator()</full_name>
+        <docblock line="68">
+          <description>Return an \ArrayIterator for the contents of this collection object</description>
+          <long-description>Requried for For...Each to work</long-description>
+          <tag name="return" line="68" description="Iterator for the contents of this&#10;                                 collection" type="\ArrayIterator">
+            <type>\ArrayIterator</type>
+          </tag>
+          <tag name="see" line="68" description="What this function implements" link="\IteratorAggregate::getIterator"/>
+          <tag name="see" line="68" description="Storage for the verified array" link="self::Array"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="emeraldinspirations\library\typedCollection" line="79" package="Default">
+        <name>count</name>
+        <full_name>\emeraldinspirations\library\typedCollection\CollectionInterface::count()</full_name>
+        <docblock line="79">
+          <description>Return number of ControllerInterface objects in collection</description>
+          <long-description>Required for \count() to work</long-description>
+          <tag name="return" line="79" description="Number of objects in collection" type="integer">
+            <type>integer</type>
+          </tag>
+          <tag name="see" line="79" description="What this function implements" link="\Countable::count"/>
+          <tag name="see" line="79" description="Storage for the verified array" link="self::Array"/>
+        </docblock>
+      </method>
+    </interface>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="38" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $DataType in verifyArray()</error>
+    </parse_markers>
+    <source>eJzNVl9v0zAQf8+nOE17YFXVgdRJKBuw0hVpSIypFAFSJeQm19SQ2sF2WirEd+dsJ2mWpu2QeMAPbWWf7+73x3avXmWLLAgEW6LOWISAS1QsjbnQGVfMcCn0NOUzxdRmajYZxkOZphjZhcsgOO90AujAAFao+JxjDFG1DHIODHSGEa1EYDdTrAsXgD8NitjGp0xriJiAGUKuaYZp2pYxRS0ZVF1AoXPFRQJmwQx9IDCl2IZCNIXbfJEUhlHHIEW6cREKf+SoDWWzZXtF3WuWm4VU8I4ZClrDydtc8AzVCbxmKkVj4KoF/nWyZDztRXL50iXRiFAf01tqkxmpBkmiMGGGlj/5Vrku8PFlllJqYXR7iqHMCcIsrU0fTHEecEFV51axrSC31ZynV7f01q0VC34FgS3lVLSjAxMiD5UikkS+nKGiDpRcC1gvUACJhL4HoLZIXkv1WkmrjVPX5ShTXa+Ycj+p1WquRK4xnYehc81m4OT0Y2LLWbHnuXCYip3n7puE1gZG4/H78dePd6PP96PhZHQz+XI/ghfwrP/8ov+83794erkDy9NQOKfrQRFJEWbOqZycKjZ1cEIaC1DnWZbywkZNfM6jFotx9oQbZtiE4qDCgm4fIIsWVfJlThBmuJOFFSzU2Siz+DUjgXsc1WaFJlcCYCV5XE06dNoaU6xYyuOBSnJbelTiLSOPjsle8efkodifSK4fna9g1dqmuBeI2phoq/PbNEmb3I+uWGEm78RYuPmBp7ShYx5VfoOaJ58Uyp6WynYLJU7d8hnsGm3sBbEIqyvR7Wmap1SONeTeUr8nQ5Oepl8APtB5ZwmSRmp/Ix58ls/SOngjPfAzCH30QYRWOWdwe9OnqZsrPEL3lY8p7uZjNJRnqI2GZplaiUf7oL2NJpfbq7Q8x3Uuyz4OMpigeZjFcenh7SWTztbUEV9e15V2tm+H1R0b+xjU3tfZN/rVYHRML5+yYtsMb6Tq9Xoje/3Q5bGW6vs+/hvlq3G0ob9QoGx8h/zdVyoMicdy9tEltk9mJUf91WyV/J8en1rTTvaHrO6Vv3hqidEhsassUWr7lnuZ3YHa4bCuOleF6tPIPvDUwBHN6V1upfGuaudQ6Zp81R+KMHSl/xc5Sh5CC5XY/x38AVUlLtM=</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <namespace name="emeraldinspirations" full_name="emeraldinspirations">
+    <namespace name="library" full_name="emeraldinspirations\library">
+      <namespace name="typedCollection" full_name="emeraldinspirations\library\typedCollection"/>
+    </namespace>
+  </namespace>
+  <deprecated count="0"/>
+</project>

@@ -17,5 +17,8 @@
         "psr-4": {
             "emeraldinspirations\\library\\typedCollection\\": "src/"
         }
+    },
+    "require-dev": {
+        "phpdocumentor/phpdocumentor": "^2.9"
     }
 }
